@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>futbolero template</title>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Event and Conference Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Eventre HTML Template v1.0">
+  
+  <!-- theme meta -->
+  <meta name="theme-name" content="eventre" />
+  
+  <!-- PLUGINS CSS STYLE -->
+  <!-- Bootstrap -->
+  <link href="plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="plugins/font-awsome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Magnific Popup -->
+  <link href="plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <!-- Slick Carousel -->
+  <link href="plugins/slick/slick.css" rel="stylesheet">
+  <link href="plugins/slick/slick-theme.css" rel="stylesheet">
+  <!-- CUSTOM CSS -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- FAVICON -->
+  <link href="img/icono 1 futbolero.png" rel="shortcut icon">
+  <!-- Slick carruseles-->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+// Add the new slick-theme.css if you want the default styling
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+  
+
+</head>
+
+<body class="body-wrapper">
+
+
+<!--========================================
+=            Navigation Section            =
+=========================================-->
+<nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
+  <div class="container-fluid p-0">
+    <!-- logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="img/icono 1 futbolero.png" alt="logo">
+    </a>
+	<span class="username">Usuario</span>
+	<!--reproductor de audio-->
+            <div class="audio-controls">
+                <i class="fa fa-step-backward" onclick="prevSong()"></i>
+                <i id="play-pause" class="fa fa-play" onclick="togglePlay()"></i>
+                <i class="fa fa-step-forward" onclick="nextSong()"></i>
+                <input type="range" id="volume" onchange="changeVolume()" min="0" max="1" step="0.01">
+            </div>
+	<!--NavBar-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item dropdown active">
+          <a class="nav-link" href="#!" data-toggle="dropdown">Inicio <i class="fa fa-angle-down"></i>
+            <span>/</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#!" data-toggle="dropdown">estadisticas <i class="fa fa-angle-down"></i><span>/</span></a>
+          <!-- Dropdown list -->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about-us.html">About Us</a></li>
+            <li><a class="dropdown-item" href="single-speaker.html">Single Speaker</a></li>
+            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+            <li><a class="dropdown-item" href="gallery-two.html">Gallery-02</a></li>
+            <li><a class="dropdown-item" href="testimonial.html">Testimonial</a></li>
+            <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+            <li><a class="dropdown-item" href="FAQ.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="404.html">404</a></li>
+                    
+            <li class="dropdown dropdown-submenu dropright">
+              <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+    
+              <ul class="dropdown-menu" aria-labelledby="dropdown0301">
+                <li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
+                <li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+
+
+          <!-- Dropdown list -->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="news.html">News without sidebar</a></li>
+            <li><a class="dropdown-item" href="news-right-sidebar.html">News with right sidebar</a></li>
+            <li><a class="dropdown-item" href="news-left-sidebar.html">News with left sidebar</a></li>
+            <li><a class="dropdown-item" href="news-single.html">News Single</a></li>
+
+            <li class="dropdown dropdown-submenu dropleft">
+              <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
+    
+              <ul class="dropdown-menu" aria-labelledby="dropdown0501">
+                <li><a class="dropdown-item" href="index.html">Submenu 01</a></li>
+                <li><a class="dropdown-item" href="index.html">Submenu 02</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contacto</a>
+        </li>
+      </ul>
+	  <div class="ticket">
+		<input type="text" id="search" placeholder="Buscar...">
+		<button id="search-button"><i class="fa fa-search"></i></button>
+	</div>
+    </div>
+  </div>
+</nav>
+<!--AUDIO DE NAVBAR-->
+<audio id="audio" src="music/Mejores CancionesCanticos de las Hinchadas Del Futbol Ingles   Liverpool FC (Chants   With Lyrics.mp3"></audio>
+
+<!--====  final del navbar====-->
+
+
+<!--===========================
+=           LIGA            =
+============================-->
+
+<section class="section about">
+	<!--Titulo de seccion-->
+	<div class="section-title">
+		<h2>LIGA INGLESA</h2>
+		<div class="linea-roja"></div>
+	</div>
+	<div class="container">
+		<!--imagen de cabecera de liga y pais-->
+		<div class="image-section">
+			<div class="image-container">
+				<img src="img/Rectangle 17.png" alt="Bandera Nacional">
+			</div>
+			<div class="overlay-image">
+				<img src="img/Premier League Logo 1.png" alt="logo de liga">
+			</div>
+		</div>
+
+		</div>
+</section>
+<!--====  FINAL LIGA  ====-->
+<hr>
+	<!--Seccion NOTICIAS-->
+    <section class="noticias">
+		<div class="titulo">
+			<h1>Noticias</h1>
+			<div class="linea-roja"></div>
+		</div>
+        <div class="carrusel-container">
+            <div class="carrusel">
+                <div class="noticia">
+                    <a href="https://www.mundodeportivo.com/futbol/premier-league">
+                        <img src="img/Rectangle 24.png" alt="Noticia 1">
+                        <h2>Mundo Deportivo</h2>
+                        <p>Richarlison recupera la sonrisa</p>
+                    </a>
+                </div>
+				<div class="noticia">
+                    <a href="https://as.com/noticias/liga-inglesa/">
+                        <img src="img/Rectangle 19.png" alt="Noticia 1">
+                        <h2>Diario AS</h2>
+                        <p>El Burnley estrena su casillero
+							Tablas en Nottingham en el partido que cerraba la jornada 5 de la Premier League.</p>
+                    </a>
+                </div>
+				<div class="noticia">
+                    <a href="https://www.marca.com/futbol/premier-league.html">
+                        <img src="img/Rectangle 25.png"alt="Noticia 1">
+                        <h2>MARCA</h2>
+                        <p>Premier Legue</p>
+                    </a>
+                </div>
+				<div class="noticia">
+                    <a href="https://espndeportes.espn.com/futbol/liga/_/nombre/eng.1">
+                        <img src="img/Rectangle 19.png" alt="Noticia 1">
+                        <h2>ESPN</h2>
+                        <p>Videos noticias premier</p>
+                    </a>
+                </div>
+				<div class="noticia">
+                    <a href="https://es.besoccer.com/noticias/competicion/premier">
+                        <img src="img/Rectangle 24.png" alt="Noticia 1">
+                        <h2>BESOCCER</h2>
+                        <p>Las fechas de los derbis más importantes de Premier League 2023-24
+						</p>
+                    </a>
+                </div>
+                <!-- Repite el bloque de .noticia para más noticias -->
+            </div>
+			<button id="anterior" class="neon-button">Anterior</button>
+			<button id="siguiente" class="neon-button">Siguiente</button>
+			
+        </div>
+    </section>
+	<!--FINAL SECCION NOTICIAS-->
+	<hr>
+
+<!--==============================
+=            calendario            =
+===============================-->
+
+<section class="section schedule">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3>Event <span class="alternate">Calendario</span></h3>
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="schedule-tab">
+					<ul class="nav nav-pills text-center">
+					  <li class="nav-item">
+					    <a class="nav-link active" href="#JORNADA5" data-toggle="pill">
+					    	JORNADA 5
+					    	<span>16,17,18 SEPT 2023</span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#JORNADA6" data-toggle="pill">
+							JORNADA 6
+					    	<span>23,24 SEPT 2023</span>
+					    </a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link" href="#JORNADA7" data-toggle="pill">
+							JORNADA 7
+					    	<span>30 SEP,01,02 OCT 2023</span>
+					    </a>
+					  </li>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link" href="#JORNADA8" data-toggle="pill">
+						  JORNADA 8
+						  <span>07,08 OCT 2023</span>
+					  </a>
+					</li>
+					</ul>
+				</div>
+
+
+				<!--ACA EMPIEZA EL CONTENIDO DE CUADROS DE  PARTIDOS-->
+
+
+				<!--JORNADA 5-->
+				<div class="schedule-contents bg-schedule">
+					<div class="tab-content" id="pills-tabContent">
+					  <div class="tab-pane fade show active schedule-item" id="JORNADA5">
+					  	<!-- INDICADORES DE TABLA DE HORARIOS -->
+					  	<ul class="m-0 p-0">
+					  		<li class="headings">
+					  			<div class="time">hora</div>
+					  			<div class="speaker">Partido</div>
+					  			<div class="subject">jornada</div>
+					  			<div class="venue">estadio</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+					  			<div class="block">
+					  				<!-- HORA -->
+							  		<div class="time">
+							  			<i class="fa fa-clock-o"></i>
+							  			<span class="time">06.30 AM</span>
+							  		</div>
+							  		<!-- PARTIDO VS -->
+							  		<div class="escudos versus">
+							  			<img src="img/escudos/wolverhampthon.jpg" alt="speaker-thumb-one">
+										<span class="name"> vs </span>
+										<img src="img/escudos/liverpool.jpg" alt="speaker-thumb-one">
+							  		</div>
+							  		<!-- JORNADA -->
+							  		<div class="subject">16 SEP</div>
+							  		<!-- ESTADIO-->
+							  		<div class="venue">Molineux Stadium</div>
+					  			</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">09.30 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/aston villa.jpg" alt="speaker-thumb-one">
+									  <span class="name">vs</span>
+									  <img src="img/escudos/crystal palace.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">16 SEP </div>
+									<!-- ESTADIO-->
+									<div class="venue">Villa Park</div>
+								</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">09.30 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/fullham.jpg" alt="speaker-thumb-one">
+									  <span class="name"> vs</span>
+									  <img src="img/escudos/luton town.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">16 SEP</div>
+									<!-- ESTADIO-->
+									<div class="venue">Craven Cottage</div>
+								</div>
+					  		</li>	
+
+                            <!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">09.30 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/manchester united.jpg" alt="speaker-thumb-one">
+									  <span class="name"> vs</span>
+									  <img src="img/escudos/brighton.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">16 SEP</div>
+									<!-- ESTADIO-->
+									<div class="venue">Old Trafford</div>
+								</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">09.00 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/toteham spurs.jpg" alt="speaker-thumb-one">
+									  <span class="name">  vs </span>
+									  <img src="img/escudos/sheffield united.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">16 SEP</div>
+									<!-- ESTADIO-->
+									<div class="venue">Tottenham Hotspur Stadium</div>
+								</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">09.00 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/westham united.jpg" alt="speaker-thumb-one">
+									  <span class="name"> vs </span>
+									  <img src="img/escudos/manchester city.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">16 SEP</div>
+									<!-- ESTADIO-->
+									<div class="venue">London Stadium</div>
+								</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">09.30 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/newcastle.jpg" alt="speaker-thumb-one">
+									  <span class="name"> vs </span>
+									  <img src="img/escudos/brentfrod.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">16 SEP </div>
+									<!-- ESTADIO-->
+									<div class="venue">St. James' Park</div>
+								</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">08.00 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/bournemouth.jpg" alt="speaker-thumb-one">
+									  <span class="name"> vs </span>
+									  <img src="img/escudos/chelsea.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">17 SEP</div>
+									<!-- ESTADIO-->
+									<div class="venue">Vitality Stadium</div>
+								</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">10.30 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/everton.jpg" alt="speaker-thumb-one">
+									  <span class="name">vs </span>
+									  <img src="img/escudos/arsenal.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">17 SEP </div>
+									<!-- ESTADIO-->
+									<div class="venue">Goodison Park</div>
+								</div>
+					  		</li>
+
+					  		<!-- PARTIDO -->
+					  		<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">01.45 PM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/nothigham forest.jpg" alt="speaker-thumb-one">
+									  <span class="name"> vs </span>
+									  <img src="img/escudos/buornley.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">18 SEP</div>
+									<!-- ESTADIO-->
+									<div class="venue">The City Ground</div>
+								</div>
+					  		</li>
+
+					  	</ul>
+					  </div>
+					  <!--JORNADA 6-->
+					  <div class="tab-pane fade schedule-item" id="JORNADA6">
+					  	<!-- INDICADORES DE TABLA DE HORARIOS -->
+					  	<ul class="m-0 p-0">
+							<li class="headings">
+								<div class="time">hora</div>
+								<div class="speaker">Partido</div>
+								<div class="subject">jornada</div>
+								<div class="venue">estadio</div>
+							</li>
+
+							<!-- PARTIDO 1-->
+							<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">09.00 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/crystal palace.jpg" alt="speaker-thumb-one">
+									  <span class="name"> vs </span>
+									  <img src="img/escudos/fullham.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">23 SEP</div>
+									<!-- ESTADIO-->
+									<div class="venue">Selhurst Park</div>
+								</div>
+							</li>
+
+							<!-- PARTIDO 2-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.30 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/luton town.jpg" alt="speaker-thumb-one">
+									<span class="name">vs</span>
+									<img src="img/escudos/wolverhampthon.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">23 SEP </div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Kenilworth Road Stadium</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO 3-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/manchester city.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs</span>
+									<img src="img/escudos/nothigham forest.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">23 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Etihad Stadium</div>
+							  </div>
+							</li>	
+
+						  <!-- PARTIDO 4-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.30 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/brentfrod.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs</span>
+									<img src="img/escudos/everton.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">23 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Brentford Community Stadium</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO 5-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/buornley.jpg" alt="speaker-thumb-one">
+									<span class="name">  vs </span>
+									<img src="img/escudos/manchester united.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">23 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Turf Moor</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO 6-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/arsenal.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs </span>
+									<img src="img/escudos/toteham spurs.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">24 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Emirates Stadium</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO 7-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">08.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/brighton.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs </span>
+									<img src="img/escudos/bournemouth.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">24 SEP </div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Village Way</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO 8-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">08.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/chelsea.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs </span>
+									<img src="img/escudos/aston villa.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">24 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Stamford Bridge</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO 9-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">08.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/liverpool.jpg" alt="speaker-thumb-one">
+									<span class="name">vs </span>
+									<img src="img/escudos/westham united.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">24 SEP </div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Anfield</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO 10-->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">10.30 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/sheffield united.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs </span>
+									<img src="img/escudos/newcastle.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">24 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Bramall Lane</div>
+							  </div>
+							</li>
+
+						</ul>
+					  </div>
+
+					  <!--JORNADA 7-->
+					  <div class="tab-pane fade schedule-item" id="JORNADA7">
+					  	<!-- Headings -->
+					  	<!-- INDICADORES DE TABLA DE HORARIOS -->
+					  	<ul class="m-0 p-0">
+							<li class="headings">
+								<div class="time">hora</div>
+								<div class="speaker">Partido</div>
+								<div class="subject">jornada</div>
+								<div class="venue">estadio</div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+								<div class="block">
+									<!-- HORA -->
+									<div class="time">
+										<i class="fa fa-clock-o"></i>
+										<span class="time">06.30 AM</span>
+									</div>
+									<!-- PARTIDO VS -->
+									<div class="escudos versus">
+										<img src="img/escudos/wolverhampthon.jpg" alt="speaker-thumb-one">
+									  <span class="name"> vs </span>
+									  <img src="img/escudos/liverpool.jpg" alt="speaker-thumb-one">
+									</div>
+									<!-- JORNADA -->
+									<div class="subject">16 SEP</div>
+									<!-- ESTADIO-->
+									<div class="venue">Molineux Stadium</div>
+								</div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.30 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/aston villa.jpg" alt="speaker-thumb-one">
+									<span class="name">vs</span>
+									<img src="img/escudos/crystal palace.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">16 SEP </div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Villa Park</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.30 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/fullham.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs</span>
+									<img src="img/escudos/luton town.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">16 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Craven Cottage</div>
+							  </div>
+							</li>	
+
+						  <!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.30 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/manchester united.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs</span>
+									<img src="img/escudos/brighton.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">16 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Old Trafford</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/toteham spurs.jpg" alt="speaker-thumb-one">
+									<span class="name">  vs </span>
+									<img src="img/escudos/sheffield united.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">16 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Tottenham Hotspur Stadium</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/westham united.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs </span>
+									<img src="img/escudos/manchester city.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">16 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">London Stadium</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">09.30 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/newcastle.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs </span>
+									<img src="img/escudos/brentfrod.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">16 SEP </div>
+								  <!-- ESTADIO-->
+								  <div class="venue">St. James' Park</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">08.00 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/bournemouth.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs </span>
+									<img src="img/escudos/chelsea.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">17 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Vitality Stadium</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">10.30 AM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/everton.jpg" alt="speaker-thumb-one">
+									<span class="name">vs </span>
+									<img src="img/escudos/arsenal.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">17 SEP </div>
+								  <!-- ESTADIO-->
+								  <div class="venue">Goodison Park</div>
+							  </div>
+							</li>
+
+							<!-- PARTIDO -->
+							<li class="schedule-details">
+							  <div class="block">
+								  <!-- HORA -->
+								  <div class="time">
+									  <i class="fa fa-clock-o"></i>
+									  <span class="time">01.45 PM</span>
+								  </div>
+								  <!-- PARTIDO VS -->
+								  <div class="escudos versus">
+									  <img src="img/escudos/nothigham forest.jpg" alt="speaker-thumb-one">
+									<span class="name"> vs </span>
+									<img src="img/escudos/buornley.jpg" alt="speaker-thumb-one">
+								  </div>
+								  <!-- JORNADA -->
+								  <div class="subject">18 SEP</div>
+								  <!-- ESTADIO-->
+								  <div class="venue">The City Ground</div>
+							  </div>
+							</li>
+
+						</ul>
+					  </div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--==== final calendario  ====-->
+
+
+
+
+
+
+
+<!--===================================
+=            MEMBRESIAS           =
+====================================-->
+
+<section class="section pricing">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3>Vamos<span class="alternate">¡Hazte miembro!</span></h3>
+					<p>La mejor información del mundo del fútbol solo en Futbolero</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<!-- Pricing Item -->
+				<div class="pricing-item">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Básico</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2>0.00<span>$</span></h2>
+							<p>/Persona</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>Todas las ligas</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Todas las plantillas</p></li>
+							<li><p><span class="fa fa-times-circle unavailable"></span>Foros</p></li>
+							<li><p><span class="fa fa-times-circle unavailable"></span>Estadisticas</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="Login.html" class="btn btn-transparent-md">Hazte miembro</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<!-- Pricing Item -->
+				<div class="pricing-item featured">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Estrella</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2>10.00<span>$</span></h2>
+							<p>/Persona</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>Todas las ligas</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Todas las plantillas</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Foros</p></li>
+							<li><p><span class="fa fa-times-circle unavailable"></span>Estadisticas</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="Login.html" class="btn btn-main-md">Hazte miembro</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 m-auto">
+				<!-- Pricing Item -->
+				<div class="pricing-item">
+					<div class="pricing-heading">
+						<!-- Title -->
+						<div class="title">
+							<h6>Premium</h6>
+						</div>
+						<!-- Price -->
+						<div class="price">
+							<h2>20.00<span>$</span></h2>
+							<p>/Persona</p>
+						</div>
+					</div>
+					<div class="pricing-body">
+						<!-- Feature List -->
+						<ul class="feature-list m-0 p-0">
+							<li><p><span class="fa fa-check-circle available"></span>Todas las ligas</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Todas las plantillas</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Foro</p></li>
+							<li><p><span class="fa fa-check-circle available"></span>Estadisticas</p></li>
+						</ul>
+					</div>
+					<div class="pricing-footer text-center">
+						<a href="Login.html" class="btn btn-transparent-md">Hazte miembro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  FINAL MEMBRESIAS  ====-->
+
+
+
+<!--==============================
+=            Sponsors            =
+===============================-->
+
+<section class="sponsors section bg-sponsors overlay-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3>Nuestros <span class="alternate">Sponsors</span></h3>
+					<p>ALIADOS Y PATROCINADORES OFICIALES</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<!-- Title -->
+				<div class="sponsor-title text-center">
+					<h5>Platinum Sponsors</h5>
+				</div>
+				<div class="block text-center">
+					<!-- Sponsors image list -->
+					<ul class="list-inline sponsors-list">
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="img/Logo 1 - Fondo negro, lineas blancas 2p 3.png" alt="sponsors-logo" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="img/ArteGestión 0 1.png" alt="sponsors-logo" class="img-fluid">
+								</a>
+							</div>
+						</li>
+						<li class="list-inline-item">
+							<div class="image-block text-center">
+								<a href="#">
+									<img src="img/logo gbo 2023 sena.png" alt="sponsors-logo" class="img-fluid">
+								</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Sponsors  ====-->
+
+
+
+<!--============================
+=            Footer            =
+=============================-->
+
+<footer class="footer-main">
+
+</footer>
+<!-- Subfooter -->
+<footer class="subfooter">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center">
+        <div class="copyright-text">
+          <p>Bogotá- Colombia &copy; 2023</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <a href="#" class="to-top"><i class="fa fa-angle-up"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- JAVASCRIPTS -->
+  <!-- jQuey -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/bootstrap.min.js"></script>
+  <!-- Shuffle -->
+  <script src="plugins/shuffle/shuffle.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Slick Carousel -->
+  <script src="plugins/slick/slick.min.js"></script>
+  <!-- SyoTimer -->
+  <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
+  <!-- Google Mapl -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+  <script src="plugins/google-map/gmap.js"></script>
+  <!-- Custom Script -->
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
+
+
+
