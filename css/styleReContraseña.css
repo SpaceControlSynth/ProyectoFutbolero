@@ -1,0 +1,130 @@
+    /*Bakcground en degrade*/
+    body {
+        background: linear-gradient(to bottom, #E0BB20, black);
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+/* Encabezado */
+header {
+    text-align: right;
+    padding: 10px;
+}
+
+header img {
+    max-width: 100px;
+}
+.logo {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Alinear en la parte superior */
+}
+.letraslogo {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Alinear en la parte superior */
+}
+.ganador {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: flex-start; /* Alinear en la parte superior */
+
+}
+
+/* Sección de imágenes */
+.images {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.images img {
+    max-width: 300px;
+    margin: 10px;
+}
+
+/* Sección de imágenes adicionales */
+.more-images {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-images img {
+    max-width: 300px;
+    margin: 10px;
+}
+
+/* Sección de correo electrónico */
+.email-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.email-section label {
+    display: block;
+}
+
+.email-section input[type="email"] {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+}
+
+.centered-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #851d1d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.centered-button:hover {
+    background-color: #ff00ea;
+    box-shadow: 0 0 10px #8B0000; /* Sombra color vinotinto */
+}
+
+/* Sección de código */
+.code-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.centered-input {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+}
+
+/* Sección de nueva contraseña */
+.password-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Botón de aceptar */
+.accept-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #861616;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.accept-button:hover {
+    background-color: #ff00ea;
+    box-shadow: 0 0 10px #8B0000; /* Sombra color vinotinto */
+}
+    

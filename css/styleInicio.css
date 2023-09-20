@@ -1,0 +1,115 @@
+/* Estilos generales */
+    /*Bakcground en degrade*/
+body {
+    background: linear-gradient(to bottom, #E0BB20, black);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+/
+}
+
+/* Estilo del logo */
+.logo1 {
+    display: inline-block; /* Asegura que el contenedor solo ocupe el espacio necesario */
+    transition: transform 0.3s; /* Agrega una transición suave para la rotación */
+}
+
+/* Estilo de la imagen */
+.logo1 img {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+}
+
+/* Estilo de rotación cuando el mouse pasa sobre el contenedor */
+.logo1:hover {
+    transform: rotate(360deg); /* 360 grados de rotación completa */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Estilos de los campos de entrada */
+.input-container {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    border: 2px solid #00f3ff;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.input-container i {
+    margin-right: 10px;
+    color: #00f3ff;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+/* Estilos de los botones */
+.neon-button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #8B0000; /* Sombra color vinotinto */
+}
+
+.neon-button:hover {
+    background-image: linear-gradient(45deg, #00f3ff, #ff00ea, #00f3ff, #ff00ea);
+    animation: neon 1s linear infinite;
+    box-shadow: 0 0 10px #8B0000, 0 0 20px #8B0000; /* Sombra vinotinto al pasar el mouse */
+}
+
+@keyframes neon {
+    0%, 100% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+/* Estilos del enlace de "Olvidaste tu contraseña?" */
+.forgot-password {
+    color: #00f3ff;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.forgot-password:hover {
+    color: #ff00ea;
+}
+
+/* Estilos del footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.terms-link {
+    color: #00f3ff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.terms-link:hover {
+    color: #ff00ea;
+}
